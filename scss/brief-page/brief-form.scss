@@ -1,0 +1,340 @@
+.brief {
+    margin-bottom: 0;
+    opacity: 1;
+    transform: translate(0, 0);
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+
+        @include mxw($xs) {
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
+    &__child {
+        width: 50%;
+        height: 100vh;
+        position: relative;
+    }
+
+    &__left {
+        background-color: rgba(0, 147, 186, 0.2);
+        min-width: 900px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        @include mxw($md) {
+            min-width: 570px;
+        }
+
+        @include mxw($xs) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        width: 400px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 200px;
+    }
+
+    &__form {
+        z-index: 10;
+        background-color: $white;
+        overflow-y: scroll;
+        padding: 50px;
+        min-width: 960px;
+
+        @include mxw($vlg) {
+            padding: 30px;
+            min-width: 780px;
+        }
+
+        @include mxw($lg) {
+            min-width: 640px;
+        }
+
+        @include mxw($md) {
+            padding: 20px;
+            min-width: 520px;
+        }
+        @include mxw($xs) {
+            padding: 10px;
+            min-width: 100%;
+        }
+    }
+
+    &__form-text {
+        margin-bottom: 50px;
+
+        @include mxw($sm) {
+            margin-bottom: 30px;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+
+            @include mxw($vlg) {
+                font-size: 14px;
+            }
+
+            @include mxw($xs) {
+                font-size: 12px;
+            }
+
+            &:first-child {
+                text-transform: uppercase;
+                font-size: 48px;
+                font-weight: 600;
+                margin-bottom: 20px;
+
+                @include mxw($vlg) {
+                    font-size: 36px;
+                }
+
+                @include mxw($md) {
+                    font-size:  32px;
+                }
+                @include mxw($sm) {
+                    font-size:  21px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        
+    }
+
+    &__subtitle {
+
+        display: block;
+        font-size: 38px;
+        margin-bottom: 20px;
+
+        @include mxw($vlg) {
+            font-size: 28px;
+        }
+
+        @include mxw($xs) {
+            font-size: 24px;
+        }
+    }
+
+    &__subtitle-name {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 20px;
+
+        @include mxw($vlg) {
+            font-size: 22px;
+        }
+
+        @include mxw($xs) {
+            font-size: 18px;
+        }
+    }
+
+    &__input-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+
+        @include mxw($md) {
+            gap: 30px;
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        @include mxw($xs) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__input-group {
+        position: relative;
+        max-width: 400px;
+        box-shadow: 0px 1px 0px 0px rgba(0, 151, 189, 1);
+        @include mxw($xs) {
+            max-width: 100%;
+        }
+        &--textarea {
+            max-width: 100%;
+            margin-bottom: 40px;
+            box-shadow: 0 0 0 0;
+            border-right: 1px solid $accent;
+            border-bottom: 1px solid $accent;
+            border-radius: 0 0 5px 0;
+            @include mxw($md) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &.success {
+            .brief__validation-msg {
+                color: green;
+            }
+        }
+
+        &--margin {
+            margin-bottom: 40px;
+
+            @include mxw($sm) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        font-size: 14px;
+        color: $black;
+        font-weight: 500;
+        padding: 0 0 3px 5px;
+        resize: unset;
+
+        @include mxw($md) {
+            font-size: 12px;
+        }
+    }
+
+    &__validation-msg {
+        font-size: 14px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -18px;
+        color: red;
+       
+        @include mxw($lg) {
+            font-size: 10px;
+            bottom: -14px;
+        }
+        @include mxw($sm) {
+            font-size: 9px;
+            bottom: -14px;
+        }
+    }
+
+    &__list-type {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    &__radio {
+
+        &:checked+.brief__radio-label::after {
+            border-color: $accent;
+            background-color: $accent;
+        }
+    }
+
+    &__radio-label {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+
+        @include mxw($vlg) {
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        @include mxw($sm) {
+            font-size: 14px;
+            padding-left: 35px;
+        }
+
+        @include mxw($md) {
+            font-size: 12px;
+            padding-left: 25px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 25px;
+            transition: 0.3s ease-in-out;
+            border-radius: 50%;
+            border: 1px solid $black;
+            padding: 5px;
+            background-clip: content-box;
+
+            @include mxw($md) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &__price-text {
+        margin-bottom: 40px;
+
+        @include mxw($vlg) {
+            font-size: 16px;
+        }
+
+        @include mxw($md) {
+            font-size: 14px;
+        }
+        @include mxw($xs) {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__bottom-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: end;
+
+        p {
+            font-size: 18px;
+            margin-bottom: 50px;
+
+            @include mxw($vlg) {
+                font-size: 16px;
+            }
+
+            @include mxw($md) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__accent {
+        width: 300px;
+    }
+}
