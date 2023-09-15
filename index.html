@@ -1,300 +1,304 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Studio MODIFY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Studio MODIFY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
 
 
 
 
 
-    <main class="main">
-        <section class="brief">
-  <div class="brief__box">
-    <div class="brief__left brief__child">
+  <main class="main">
+    <section class="brief">
+      <div class="brief__box">
+        <div class="brief__left brief__child">
 
-      <img class="brief__img" src="images/icons/form-deco.svg" alt="логотип" />
-    </div>
+          <img class="brief__img" src="images/icons/form-deco.svg" alt="логотип" />
+        </div>
 
-    <div class="brief__form brief__child">
-      <div class="brief__form-text">
-        <p>
-          Перший крок зроблено!
-        </p>
-        <p>
-          Нам потрібно кілька
-          деталей. Будь ласка, заповніть цей бриф, щоб ми могли краще зрозуміти
-          ваші потреби та побажання.
-        </p>
+        <div class="brief__form brief__child">
+          <div class="brief__form-text">
+            <p>
+              Перший крок зроблено!
+            </p>
+            <p>
+              Нам потрібно кілька
+              деталей. Будь ласка, заповніть цей бриф, щоб ми могли краще зрозуміти
+              ваші потреби та побажання.
+            </p>
+          </div>
+
+          <form class="brief__info" name="briefForm" data-netlify="true">
+            <span class="brief__subtitle">Спосіб зв’язку</span>
+            <div class="brief__input-box">
+              <div class="brief__input-group js-form__group">
+                <input class="brief__input" type="text" placeholder="Ім'я" name="firstName" id="firstName">
+                <span class="brief__validation-msg js-form__msg"></span>
+              </div>
+              <div class="brief__input-group js-form__group">
+                <input class="brief__input" type="tel" placeholder="Номер телефону" name="phoneNumber" id="phoneNumber">
+                <span class="brief__validation-msg js-form__msg"></span>
+              </div>
+              <div class="brief__input-group js-form__group">
+                <input class="brief__input" type="email" placeholder="Email" name="userEmail" id="email">
+                <span class="brief__validation-msg js-form__msg"></span>
+              </div>
+              <div class="brief__input-group js-form__group">
+                <input class="brief__input" type="time" placeholder="Зручний час для зв'язку" name="timeConect"
+                  id="timeConect">
+                <span class="brief__validation-msg js-form__msg"></span>
+              </div>
+            </div>
+
+
+
+            <span class="brief__subtitle">Інформація про проект</span>
+            <div class="brief__input-box">
+              <div class="brief__input-group js-form__group">
+                <input class="brief__input" type="text" placeholder="Назва компанії/бренду/проекту" name="companyName"
+                  id="companyName">
+                <span class="brief__validation-msg js-form__msg"></span>
+              </div>
+              <div class="brief__input-group js-form__group">
+                <input class="brief__input" type="text" placeholder="Сфера вашої діяльності" name="clientActivity"
+                  id="clientActivity">
+                <span class="brief__validation-msg js-form__msg"></span>
+              </div>
+              <div class="brief__input-group js-form__group">
+                <input class="brief__input" type="text" placeholder="Цільова аудиторія/Вік" name="targetAudience"
+                  id="targetAudience">
+                <span class="brief__validation-msg js-form__msg"></span>
+              </div>
+              <div class="brief__input-group">
+                <input class="brief__input js-stop-check" type="text" placeholder="Ваші переваги над конкурентами"
+                  name="advantages" id="advantages">
+                <span class="brief__validation-msg"></span>
+              </div>
+            </div>
+            <div class="brief__input-group brief__input-group--textarea">
+              <textarea class="brief__input js-stop-check" id="mainServices" name="mainServices"
+                placeholder="Характеристика основних товарів або послуг компанії" rows="4" cols="50"></textarea>
+              <span class="btief__validation-msg"></span>
+            </div>
+
+
+            <span class="brief__subtitle">Вимоги до проекту</span>
+            <div class="brief__input-group brief__input-group--textarea">
+              <textarea class="brief__input js-stop-check" id="goal" name="goal"
+                placeholder="Яка мета цього веб-сайту? Що ми хочемо досягти завдяки його розробці?" rows="4"
+                cols="50"></textarea>
+              <span class="btief__validation-msg"></span>
+            </div>
+            <span class="brief__subtitle-name">Тип сайту</span>
+            <ul class="brief__list-type">
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="radio" name="webProject" id="webStore" checked>
+                <label class="brief__radio-label" for="webStore">Інтернет-магазин</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="radio" name="webProject" id="Landing">
+                <label class="brief__radio-label" for="Landing">Landing Page </label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="radio" name="webProject" id="companySite">
+                <label class="brief__radio-label" for="companySite">Корпоративний сайт</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="radio" name="webProject" id="catalog">
+                <label class="brief__radio-label" for="catalog">Каталог</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="radio" name="webProject" id="individualProject">
+                <label class="brief__radio-label" for="individualProject">Індивідуальний проект</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="radio" name="webProject" id="marketingSite">
+                <label class="brief__radio-label" for="marketingSite">Маркетинг сайт</label>
+              </li>
+            </ul>
+
+
+            <span class="brief__subtitle">Дизайн</span>
+
+            <div class="brief__input-group brief__input-group--margin">
+              <input class="brief__input" type="text" placeholder="Наявність Фірмового стилю / Бренд буку"
+                name="corporateIdentity " id="timeConect">
+              <span class="brief__validation-msg"></span>
+            </div>
+
+            <span class="brief__subtitle-name">Опишіть яким уявляєте майбутній сайт</span>
+            <ul class="brief__list-type">
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="style-type" id="strictStyle">
+                <label class="brief__radio-label" for="strictStyle">Строгий</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="style-type" id="dynamicStyle">
+                <label class="brief__radio-label" for="dynamicStyle">Динамічний </label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="style-type" id="classicStyle">
+                <label class="brief__radio-label" for="classicStyle">Класичний</label>
+
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="style-type" id="youthStyle">
+                <label class="brief__radio-label" for="youthStyle">Молодіжний</label>
+              </li>
+            </ul>
+            <div class="brief__input-group brief__input-group--textarea">
+              <textarea class="brief__input js-stop-check" id="sitesLike" name="sitesLike"
+                placeholder="Сайти, які подобаються" rows="4" cols="50"></textarea>
+              <span class="btief__validation-msg"></span>
+            </div>
+            <div class="brief__input-group brief__input-group--textarea">
+              <textarea class="brief__input js-stop-check" id="sitesNotLike" name="sitesNotLike"
+                placeholder="Сайти, які НЕ подобаються" rows="4" cols="50"></textarea>
+              <span class="btief__validation-msg"></span>
+            </div>
+            <div class="brief__input-group brief__input-group--textarea">
+              <textarea class="brief__input js-stop-check" id="competitors" name="competitors"
+                placeholder="Які є основні конкуренти, і чи є щось, що ви хотіли б вдосконалити в порівнянні з їхніми сайтами?"
+                rows="4" cols="50"></textarea>
+              <span class="btief__validation-msg"></span>
+            </div>
+
+
+
+
+            <span class="brief__subtitle">Функціональність сайту</span>
+            <ul class="brief__list-type">
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="menu" checked>
+                <label class="brief__radio-label" for="menu">Меню та навігація</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="registration">
+                <label class="brief__radio-label" for="registration">Реєстрація і авторизація</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="search">
+                <label class="brief__radio-label" for="search">Пошук</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="conection" checked>
+                <label class="brief__radio-label" for="conection">Форми зворотного зв'язку</label>
+              </li>
+
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="blog">
+                <label class="brief__radio-label" for="blog">Блог або новини</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="gallery">
+                <label class="brief__radio-label" for="gallery">Галерея або портфоліо</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="languages">
+                <label class="brief__radio-label" for="languages">Можливість мультиязичності</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="commers">
+                <label class="brief__radio-label" for="commers">Електронна комерція</label>
+              </li>
+
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="reviews">
+                <label class="brief__radio-label" for="reviews">Коментарі і відгуки</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="admin" checked>
+                <label class="brief__radio-label" for="admin">Система управління контентом (CMS)</label>
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="adaptive" checked>
+                <label class="brief__radio-label" for="adaptive">Мобільна сумісність</label>
+
+              </li>
+              <li class="brief__item-type">
+                <input class="brief__radio sr-only" type="checkbox" name="functionality" id="optimization">
+                <label class="brief__radio-label" for="optimization">SEO-оптимізація</label>
+              </li>
+
+            </ul>
+            <div class="brief__input-group brief__input-group--textarea">
+              <textarea class="brief__input js-stop-check" id="inner-functionality" name="inner-functionality"
+                placeholder="Інші функціональності або сторінки, яких не має в переліку" rows="4" cols="50"></textarea>
+              <span class="btief__validation-msg"></span>
+            </div>
+
+
+            <span class="brief__subtitle">Бюджет</span>
+            <div class="brief__input-group brief__input-group--margin">
+              <input class="brief__input js-stop-check" type="number" placeholder="Очікуваний бюджет для цього проекту?"
+                name="projectBudget" id="projectBudget">
+              <span class="brief__validation-msg"></span>
+            </div>
+
+
+            <p class="brief__price-text">"Коли ви вказуєте орінтову вартість. Нам легше сформувати вигідну пропозицію і
+              пояснити, чому потрібно робити ті чи інші роботи."</p>
+
+
+            <span class="brief__subtitle">Майбутні перспективи росту та просування</span>
+            <div class="brief__input-box">
+              <div class="brief__input-group">
+                <input class="brief__input js-stop-check" type="text" placeholder="Чи потрібна підтримка сайту?"
+                  name="support" id="support">
+                <span class="brief__validation-msg"></span>
+              </div>
+              <div class="brief__input-group">
+                <input class="brief__input js-stop-check" type="text" placeholder="Чи маєте намір просувати сайт?"
+                  name="promote" id="promote">
+                <span class="brief__validation-msg"></span>
+              </div>
+            </div>
+
+
+            <div class="brief__input-group brief__input-group--margin">
+              <input class="brief__input js-stop-check" type="text"
+                placeholder="Чи розглядаєте можливість рекламувати ваш сайт?" name="advertising" id="advertising">
+              <span class="brief__validation-msg"></span>
+            </div>
+
+
+            <div class="brief__input-group brief__input-group--textarea">
+              <textarea class="brief__input js-stop-check" id="wishes" name="wishes"
+                placeholder="Додаткові побажання і коментарі" rows="4" cols="50"></textarea>
+              <span class="btief__validation-msg"></span>
+            </div>
+
+            <div class="brief__bottom-box">
+              <p>Ми дуже раді, що ви обрали нас для створення вашого веб-сайту. Для нас важлива ваша довіра, і ми з
+                нетерпінням приступимо до роботи. Разом ми створимо сайт, який відповідає вашим потребам і допоможе
+                розвивати вашу справу в онлайн.</p>
+              <button class="brief__accent accent-btn" type="submit">
+                Надіслати
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-
-      <form class="brief__info" name="briefForm">
-        <span class="brief__subtitle">Спосіб зв’язку</span>
-        <div class="brief__input-box">
-          <div class="brief__input-group js-form__group">
-            <input class="brief__input" type="text" placeholder="Ім'я" name="firstName" id="firstName">
-            <span class="brief__validation-msg js-form__msg"></span>
-          </div>
-          <div class="brief__input-group js-form__group">
-            <input class="brief__input" type="tel" placeholder="Номер телефону" name="phoneNumber" id="phoneNumber">
-            <span class="brief__validation-msg js-form__msg"></span>
-          </div>
-          <div class="brief__input-group js-form__group">
-            <input class="brief__input" type="email" placeholder="Email" name="userEmail" id="email">
-            <span class="brief__validation-msg js-form__msg"></span>
-          </div>
-          <div class="brief__input-group js-form__group">
-            <input class="brief__input" type="time" placeholder="Зручний час для зв'язку" name="timeConect"
-              id="timeConect">
-            <span class="brief__validation-msg js-form__msg"></span>
-          </div>
-        </div>
+    </section>
+  </main>
 
 
 
-        <span class="brief__subtitle">Інформація про проект</span>
-        <div class="brief__input-box">
-          <div class="brief__input-group js-form__group">
-            <input class="brief__input" type="text" placeholder="Назва компанії/бренду/проекту" name="companyName"
-              id="companyName">
-            <span class="brief__validation-msg js-form__msg"></span>
-          </div>
-          <div class="brief__input-group js-form__group">
-            <input class="brief__input" type="text" placeholder="Сфера вашої діяльності" name="clientActivity"
-              id="clientActivity">
-            <span class="brief__validation-msg js-form__msg"></span>
-          </div>
-          <div class="brief__input-group js-form__group">
-            <input class="brief__input" type="text" placeholder="Цільова аудиторія/Вік" name="targetAudience"
-              id="targetAudience">
-            <span class="brief__validation-msg js-form__msg"></span>
-          </div>
-          <div class="brief__input-group">
-            <input class="brief__input js-stop-check" type="text" placeholder="Ваші переваги над конкурентами"
-              name="advantages" id="advantages">
-            <span class="brief__validation-msg"></span>
-          </div>
-        </div>
-        <div class="brief__input-group brief__input-group--textarea">
-          <textarea class="brief__input js-stop-check" id="mainServices" name="mainServices"
-            placeholder="Характеристика основних товарів або послуг компанії" rows="4" cols="50"></textarea>
-          <span class="btief__validation-msg"></span>
-        </div>
-
-
-        <span class="brief__subtitle">Вимоги до проекту</span>
-        <div class="brief__input-group brief__input-group--textarea">
-          <textarea class="brief__input js-stop-check" id="goal" name="goal"
-            placeholder="Яка мета цього веб-сайту? Що ми хочемо досягти завдяки його розробці?" rows="4"
-            cols="50"></textarea>
-          <span class="btief__validation-msg"></span>
-        </div>
-        <span class="brief__subtitle-name">Тип сайту</span>
-        <ul class="brief__list-type">
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="radio" name="webProject" id="webStore" checked>
-            <label class="brief__radio-label" for="webStore">Інтернет-магазин</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="radio" name="webProject" id="Landing">
-            <label class="brief__radio-label" for="Landing">Landing Page </label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="radio" name="webProject" id="companySite">
-            <label class="brief__radio-label" for="companySite">Корпоративний сайт</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="radio" name="webProject" id="catalog">
-            <label class="brief__radio-label" for="catalog">Каталог</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="radio" name="webProject" id="individualProject">
-            <label class="brief__radio-label" for="individualProject">Індивідуальний проект</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="radio" name="webProject" id="marketingSite">
-            <label class="brief__radio-label" for="marketingSite">Маркетинг сайт</label>
-          </li>
-        </ul>
-
-
-        <span class="brief__subtitle">Дизайн</span>
-
-          <div class="brief__input-group brief__input-group--margin">
-            <input class="brief__input" type="text" placeholder="Наявність Фірмового стилю / Бренд буку"
-              name="corporateIdentity " id="timeConect">
-            <span class="brief__validation-msg"></span>
-          </div>
-
-        <span class="brief__subtitle-name">Опишіть яким уявляєте майбутній сайт</span>
-        <ul class="brief__list-type">
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="style-type" id="strictStyle">
-            <label class="brief__radio-label" for="strictStyle">Строгий</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="style-type" id="dynamicStyle">
-            <label class="brief__radio-label" for="dynamicStyle">Динамічний </label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="style-type" id="classicStyle">
-            <label class="brief__radio-label" for="classicStyle">Класичний</label>
-
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="style-type" id="youthStyle">
-            <label class="brief__radio-label" for="youthStyle">Молодіжний</label>
-          </li>
-        </ul>
-        <div class="brief__input-group brief__input-group--textarea">
-          <textarea class="brief__input js-stop-check" id="sitesLike" name="sitesLike"
-            placeholder="Сайти, які подобаються" rows="4" cols="50"></textarea>
-          <span class="btief__validation-msg"></span>
-        </div>
-        <div class="brief__input-group brief__input-group--textarea">
-          <textarea class="brief__input js-stop-check" id="sitesNotLike" name="sitesNotLike"
-            placeholder="Сайти, які НЕ подобаються" rows="4" cols="50"></textarea>
-          <span class="btief__validation-msg"></span>
-        </div>
-        <div class="brief__input-group brief__input-group--textarea">
-          <textarea class="brief__input js-stop-check" id="competitors" name="competitors"
-            placeholder="Які є основні конкуренти, і чи є щось, що ви хотіли б вдосконалити в порівнянні з їхніми сайтами?"
-            rows="4" cols="50"></textarea>
-          <span class="btief__validation-msg"></span>
-        </div>
+  <script src="js/main.min.js"></script>
 
 
 
-
-        <span class="brief__subtitle">Функціональність сайту</span>
-        <ul class="brief__list-type">
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="menu" checked>
-            <label class="brief__radio-label" for="menu">Меню та навігація</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="registration">
-            <label class="brief__radio-label" for="registration">Реєстрація і авторизація</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="search">
-            <label class="brief__radio-label" for="search">Пошук</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="conection" checked>
-            <label class="brief__radio-label" for="conection">Форми зворотного зв'язку</label>
-          </li>
-
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="blog">
-            <label class="brief__radio-label" for="blog">Блог або новини</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="gallery">
-            <label class="brief__radio-label" for="gallery">Галерея або портфоліо</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="languages">
-            <label class="brief__radio-label" for="languages">Можливість мультиязичності</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="commers">
-            <label class="brief__radio-label" for="commers">Електронна комерція</label>
-          </li>
-
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="reviews">
-            <label class="brief__radio-label" for="reviews">Коментарі і відгуки</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="admin" checked>
-            <label class="brief__radio-label" for="admin">Система управління контентом (CMS)</label>
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="adaptive" checked>
-            <label class="brief__radio-label" for="adaptive">Мобільна сумісність</label>
-
-          </li>
-          <li class="brief__item-type">
-            <input class="brief__radio sr-only" type="checkbox" name="functionality" id="optimization">
-            <label class="brief__radio-label" for="optimization">SEO-оптимізація</label>
-          </li>
-
-        </ul>
-        <div class="brief__input-group brief__input-group--textarea">
-          <textarea class="brief__input js-stop-check" id="inner-functionality" name="inner-functionality"
-            placeholder="Інші функціональності або сторінки, яких не має в переліку" rows="4" cols="50"></textarea>
-          <span class="btief__validation-msg"></span>
-        </div>
-
-
-        <span class="brief__subtitle">Бюджет</span>
-          <div class="brief__input-group brief__input-group--margin">
-            <input class="brief__input js-stop-check" type="number" placeholder="Очікуваний бюджет для цього проекту?"
-              name="projectBudget" id="projectBudget">
-            <span class="brief__validation-msg"></span>
-          </div>
-
-
-        <p class="brief__price-text">"Коли ви вказуєте орінтову вартість. Нам легше сформувати вигідну пропозицію і
-          пояснити, чому потрібно робити ті чи інші роботи."</p>
-
-
-        <span class="brief__subtitle">Майбутні перспективи росту та просування</span>
-        <div class="brief__input-box">
-          <div class="brief__input-group">
-            <input class="brief__input js-stop-check" type="text" placeholder="Чи потрібна підтримка сайту?"
-              name="support" id="support">
-            <span class="brief__validation-msg"></span>
-          </div>
-          <div class="brief__input-group">
-            <input class="brief__input js-stop-check" type="text" placeholder="Чи маєте намір просувати сайт?"
-              name="promote" id="promote">
-            <span class="brief__validation-msg"></span>
-          </div>
-        </div>
-
-
-        <div class="brief__input-group brief__input-group--margin">
-          <input class="brief__input js-stop-check" type="text"
-            placeholder="Чи розглядаєте можливість рекламувати ваш сайт?" name="advertising" id="advertising">
-          <span class="brief__validation-msg"></span>
-        </div>
-
-
-        <div class="brief__input-group brief__input-group--textarea">
-          <textarea class="brief__input js-stop-check" id="wishes" name="wishes"
-            placeholder="Додаткові побажання і коментарі" rows="4" cols="50"></textarea>
-          <span class="btief__validation-msg"></span>
-        </div>
-
-        <div class="brief__bottom-box">
-          <p>Ми дуже раді, що ви обрали нас для створення вашого веб-сайту. Для нас важлива ваша довіра, і ми з
-            нетерпінням приступимо до роботи. Разом ми створимо сайт, який відповідає вашим потребам і допоможе
-            розвивати вашу справу в онлайн.</p>
-          <button class="brief__accent accent-btn" type="submit">
-            Надіслати
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-    </main>
-
-
-
-        <script src="js/main.min.js"></script>
-
-
-
-    </body>
+</body>
 
 </html>
